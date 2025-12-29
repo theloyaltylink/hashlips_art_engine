@@ -8,6 +8,8 @@ const network = NETWORK.eth;
 const namePrefix = "Your Collection";
 const description = "Remember to replace this description";
 const baseUri = "ipfs://NewUriToReplace";
+const modelBaseUriEnabled = false; // set to true if you want to enable the modelBaseUri
+const modelBaseUri = "ipfs://NewUriToReplace"; // as per https://docs.otherside.xyz/documentation/characters/making-avatars-available-in-the-otherside
 
 const layerConfigurations = [
   {
@@ -103,6 +105,8 @@ module.exports = {
   text,
   namePrefix,
   network,
+  modelBaseUriEnabled,
+  modelBaseUri,
   gif,
   preview_gif,
 };
