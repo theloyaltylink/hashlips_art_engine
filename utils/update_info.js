@@ -5,7 +5,7 @@ const fs = require("fs");
 const { baseUri, description, namePrefix, network } = require(`${basePath}/src/config.js`);
 
 // read json data
-let rawdata = fs.readFileSync(`${basePath}/build/json/_metadata.json`);
+let rawdata = fs.readFileSync(`${basePath}/build/json/_metadata`);
 let data = JSON.parse(rawdata);
 
 data.forEach((item) => {
@@ -15,7 +15,7 @@ data.forEach((item) => {
   fs.writeFileSync(`${basePath}/build/json/${item.edition}`, JSON.stringify(item, null, 2));
 });
 
-fs.writeFileSync(`${basePath}/build/json/_metadata.json`, JSON.stringify(data, null, 2));
+fs.writeFileSync(`${basePath}/build/json/_metadata`, JSON.stringify(data, null, 2));
 
 console.log(`Updated baseUri for images to ===> ${baseUri}`);
 console.log(`Updated description for images to ===> ${description}`);

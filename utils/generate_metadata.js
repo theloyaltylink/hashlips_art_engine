@@ -145,14 +145,14 @@ const saveMetadata = (_loadedImageObject) => {
     attributes: tempAttributes,
   };
   fs.writeFileSync(
-    `${buildDir}/${shortName}.json`,
+    `${buildDir}/${shortName}`,
     JSON.stringify(tempMetadata, null, 2)
   );
   metadataList.push(tempMetadata);
 };
 
 const writeMetaData = (_data) => {
-  fs.writeFileSync(`${buildDir}/_metadata.json`, _data);
+  fs.writeFileSync(`${buildDir}/_metadata`, _data);
 };
 
 const startCreating = async () => {

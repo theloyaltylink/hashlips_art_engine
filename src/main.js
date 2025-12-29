@@ -252,13 +252,13 @@ const createDna = (_layers) => {
 };
 
 const writeMetaData = (_data) => {
-  fs.writeFileSync(`${buildDir}/json/_metadata.json`, _data);
+  fs.writeFileSync(`${buildDir}/json/_metadata`, _data);
 };
 
 const saveMetaDataSingleFile = (_editionCount) => {
   let metadata = metadataList.find((meta) => meta.edition == _editionCount);
   debugLogs ? console.log(`Writing metadata for ${_editionCount}: ${JSON.stringify(metadata)}`) : null;
-  fs.writeFileSync(`${buildDir}/json/${_editionCount}.json`, JSON.stringify(metadata, null, 2));
+  fs.writeFileSync(`${buildDir}/json/${_editionCount}`, JSON.stringify(metadata, null, 2));
 };
 
 function shuffle(array) {
