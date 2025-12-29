@@ -9,8 +9,8 @@ const {
   format,
   baseUri,
   description,
-  modelBaseUri,
-  modelBaseUriEnabled,
+  modelUri,
+  modelUriEnabled,
   background,
   uniqueDnaTorrance,
   layerConfigurations,
@@ -124,7 +124,7 @@ const addMetadata = (_dna, _edition) => {
     ...extraMetadata,
     attributes: attributesList,
   };
-  if (modelBaseUriEnabled) tempMetadata.mml = `${modelBaseUri}/${_edition}.mml`;
+  if (modelUriEnabled) tempMetadata.mml = modelUri;
   metadataList.push(tempMetadata);
   attributesList = [];
 };

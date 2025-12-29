@@ -8,8 +8,12 @@ const network = NETWORK.eth;
 const namePrefix = "Your Collection";
 const description = "Remember to replace this description";
 const baseUri = "ipfs://NewUriToReplace";
-const modelBaseUriEnabled = false; // set to true if you want to enable the modelBaseUri
-const modelBaseUri = "ipfs://NewUriToReplace"; // as per https://docs.otherside.xyz/documentation/characters/making-avatars-available-in-the-otherside
+
+// uncomment this in order to add "mml" field to metadata
+// as per https://docs.otherside.xyz/documentation/characters/making-avatars-available-in-the-otherside
+const extraMetadata = {
+  // mml: "ipfs://NewUriToReplace/model.mml",
+};
 
 const layerConfigurations = [
   {
@@ -67,8 +71,6 @@ const background = {
   default: "#000000",
 };
 
-const extraMetadata = {};
-
 const rarityDelimiter = "#";
 
 const uniqueDnaTorrance = 10000;
@@ -105,8 +107,6 @@ module.exports = {
   text,
   namePrefix,
   network,
-  modelBaseUriEnabled,
-  modelBaseUri,
   gif,
   preview_gif,
 };
